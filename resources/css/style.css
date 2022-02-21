@@ -27,6 +27,9 @@ main {
 	position: relative;
 	top: 64px;					/*to compensate for fixed header*/
 }
+.mobile {
+	display: none;				/*mobile navigation*/
+}
 .desktop {
 	list-style-type: none;
 	display: flex;
@@ -131,6 +134,9 @@ nav li {
 .image-container img{
 	width: 100%;
 }
+.mobile-image {
+	display: none;				/*mobile image view*/
+}
 .link {
 	display: flex;
 	padding: 16px;
@@ -154,7 +160,9 @@ nav li {
 }
 
 /*online section*/
-
+#mobile-online{
+	display: none;				/*mobile online section*/
+}
 #online{
 	padding: 32px 72px;
 
@@ -242,4 +250,111 @@ footer ul{
 footer li{
 	display: inline-block;
 	padding-left: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  .logo {
+  	display: none;			/*desktop navigation logo*/
+  }
+  .desktop {
+  	display: none;			/*desktop navigation*/
+  }
+  header {
+  	display: block;
+  	padding: 14px 24px;
+  }
+  .mobile{
+  	display: block
+  }
+  .mobile ul {
+  	display: flex;
+  	justify-content: space-around;
+  	padding: 0;
+  }
+  #on-campus {
+  	display: block;
+  	overflow: hidden;
+  }
+  .container {
+  	padding: 0;
+  	width: 100%;
+  }
+  .content {
+  	width: auto;
+  	padding: 32px 16px;
+  }
+  .content1{
+  	width: auto;
+  }
+  .information {
+  	display: block;
+  	overflow: hidden;
+  }
+  .information .container {
+  	display: none;
+  }
+  .links-section{
+  	width: 100%;
+  	padding: 0;
+  	border: 1px solid #c8c8c8;
+  }
+  .link {
+  	display: block;
+  }
+  .mobile-image {
+  	display: block;
+  }
+  .desktop-image{
+  	display: none;				/*desktop image version*/
+  }
+  .image-container{
+  	width: 100%;
+  }
+  .data {
+  	width: auto;
+  	padding: 32px 16px;
+  }
+  .link.dark-background {
+  	background-color: #e8f0f6;
+  }
+  #online {
+  	display: none;				/*desktop online version*/
+  }
+  #mobile-online {
+  	padding: 32px 16px;
+  	display: block;
+  	border: 1px solid #c8c8c8;
+  }
+  #mobile-online h2 {
+  	margin: 0;
+  	margin-bottom: 16px;
+  	text-align: center;
+  }
+  .m-head {
+  	padding:16px 16px 24px 16px ;
+  	margin-bottom: 8px;
+  	
+  }
+  .m-head h4{
+  	margin: 0;
+  	font-size: 25px;
+  }
+  #companies .links-section {
+  	display: none;					/*desktop links section*/
+  }
+  #companies .container {
+  	padding-top: 16px;
+  	padding-bottom: 24px;
+  }
+  #companies .light {
+  	display: none;
+  }
+  #companies h2{
+  	font-size: 36px;
+  }
+  footer{
+  	border: none;
+  	font-size: 12px;
+  }
+
 }
